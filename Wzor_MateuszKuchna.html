@@ -1,0 +1,350 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>Zadanie rekrutacyjne</title>
+    <meta name="author" content="MK">
+    <meta name="keywords" content="rozmowa, rekrutacja">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+
+
+
+    <div class="container FirstC">
+
+
+
+        <!--Tytul-->
+        <div class="row FirstPart">
+            <div class="col-md-11 FirstCol">
+                <h3 class="hTitle">Lorem ipsum set dolore amet duis sir class!</h3>
+            </div>
+
+        </div>
+
+
+        <div class="row SecondPart">
+            <!--Nozyczki pod tekstem-->
+            <img src="Nozyczki.png" class="scissors ">
+
+            <!---->
+            <!--Zielone pod zdj -->
+            <img src="TloZdj.png" class="photoBgrd">
+
+            <!--Zdjecie -->
+            <img src="Zdj.png" class="photo rounded ">
+
+            <!--Top text-->
+            <div class="col-md-4 SecondPartT">
+                Duis sit amet erat non velit rhoncus sollicitudin. Aenean ultrices ornare ligula, eu tristique nisi tincidunt et. Ut sed lacus turpis.
+                Suspendisse tincidunt blandit mauris non aliquet. Mauris dignissim, eros ut consectetur ullamcorper, magna tellus cursus lorem,
+                eget pharetra justo mauris in dui. Fusce eget mauris sit amet sapien posuere vulputate eget ac nunc. In vitae feugiat turpis,
+                eget semper ipsum. Vivamus convallis ornare nisi in elementum.
+            </div>
+        </div>
+
+        <!--Bottom text-->
+        <div class="row ThirdPart">
+            <div class="col-md-4 SecondPartB">
+                Phasellus ligula justo, feugiat eget sollicitudin eu, vehicula eget massa.
+                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+            </div>
+        </div>
+    </div>
+
+    <!--Drugi kontener-->
+
+    <div class="container SecondC">
+
+        <div class="row FirstR">
+
+            <div class="col">
+                Jak możesz dołączyć?
+            </div>
+
+        </div>
+
+
+        <div class="row SecondR">
+
+            <div class="col-md">
+                <div class="circle">
+                    <span class="circleS"> 1 </span>
+                </div>
+                Vestibulum est tortor, fringilla eu imperdiet sit amet, pellentesque sed ante. Praesent vel nibh vitae nisi ornare facilisis.
+            </div>
+
+            <div class="col-md">
+                <div class="circle">
+                    <span class="circleS"> 2 </span>
+                </div>
+                Vestibulum est tortor, fringilla eu imperdiet sit amet, pellentesque sed ante. Praesent vel nibh vitae nisi ornare facilisis.
+            </div>
+
+            <div class="col-md">
+                <div class="circle">
+                    <span class="circleS"> 3 </span>
+                </div>
+                Vestibulum est tortor, fringilla eu imperdiet sit amet, pellentesque sed ante. Praesent vel nibh vitae nisi ornare facilisis.
+            </div>
+
+            <div class="col-md">
+                <div class="circle">
+                    <span class="circleS"> 4 </span>
+                </div>
+                Vestibulum est tortor, fringilla eu imperdiet sit amet, pellentesque sed ante. Praesent vel nibh vitae nisi ornare facilisis.
+            </div>
+
+        </div>
+        <form>
+            <div class="row ThirdR">
+
+                <div class="col-md">
+                    Wybierz kwotę
+                </div>
+
+            </div>
+
+            <div class="row FourthR">
+
+                <div class="col-md">
+                    <div class="donate">
+                        <label class="red"><input type="radio" name="toggle"><span>50 ZŁ</span></label>
+                    </div>
+                </div>
+
+                <div class="col-md">
+                    <div class="donate">
+                        <label class="red"><input type="radio" name="toggle"><span>70 ZŁ</span></label>
+                    </div>
+                </div>
+
+                <div class="col-md">
+                    <div class="donate">
+                        <label class="red"><input type="radio" name="toggle"><span>100 ZŁ</span></label>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row FifthR">
+
+                <div class="col-md">
+                    *Doceniamy każdą wpłatę za pośrednictwem naszej strony, jednak aby otrzymać upominek wsparcie to minimum 50 zł.
+                </div>
+
+            </div>
+
+            <div class="row SixthR">
+                <div class="col-md">
+                    Dane do wysyłki
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md">
+                    <div class="form-group">
+                        <input class="form-control" type="text" id="imie" placeholder="Imie Nazwisko" onblur="validName(this)">
+                        <p id="alertIN"></p>
+
+                        <script type="text/javascript">
+                            function validName(code) {
+                                if (!code.value.match(/^[a-zA-Z]+ [a-zA-Z]+$/) || code.value == "") {
+                                    code.value = "";
+                                    document.getElementById("alertIN").innerHTML = "Błędne Dane";
+                                } else document.getElementById("alertIN").innerHTML = "";
+                            }
+                        </script>
+                    </div>
+                </div>
+
+
+                <div class="col-md">
+                    <div class="form-group">
+                        <input class="form-control" type="text" id="ulica" placeholder="Ulica" onblur="validStreet(this)">
+                        <p id="alertU"></p>
+
+                        <script type="text/javascript">
+                            function validStreet(code) {
+                                if (!code.value.match(/^[a-zA-Z]+$/) || code.value == "") {
+                                    code.value = "";
+                                    document.getElementById("alertU").innerHTML = "Błędne Dane";
+                                } else document.getElementById("alertU").innerHTML = "";
+                            }
+                        </script>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+
+                <div class="col-md">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="name@example.com" onblur="validEmail(this)">
+                        <p id="alertE">
+
+
+                            <script type="text/javascript">
+                                function validEmail(code) {
+                                    if (!code.value.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                                    ) || code.value == "") {
+                                        code.value = "";
+                                        document.getElementById("alertE").innerHTML = "Błędny Email";
+                                    } else document.getElementById("alertE").innerHTML = "";
+                                }
+                            </script>
+
+
+
+
+
+
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-group">
+                        <input class="form-control" type="text" id="miasto" placeholder="Miasto" onblur="validTown(this)">
+                        <p id="alertM"></p>
+
+                        <script type="text/javascript">
+                            function validTown(code) {
+                                if (!code.value.match(/^[a-zA-Z]+$/) || code.value == "") {
+                                    code.value = "";
+                                    document.getElementById("alertM").innerHTML = "Błędne Dane";
+                                } else document.getElementById("alertM").innerHTML = "";
+                            }
+                        </script>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+
+                <div class="col-md">
+                    <div class="form-group">
+                        <input class="form-control" type="text" id="tel" placeholder="Nr telefonu" onblur="validTelephoneNuber(this)">
+                        <p id="alertNT"></p>
+
+                        <script type="text/javascript">
+                            function validTelephoneNuber(code) {
+                                if (!code.value.match(/^\d\d\d\d\d\d\d\d\d$/) || code.value == "") {
+                                    code.value = "";
+                                    document.getElementById("alertNT").innerHTML = "Błędny numer";
+                                } else document.getElementById("alertNT").innerHTML = "";
+                            }
+                        </script>
+
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-group">
+                        <input class="form-control" type="text" id="kod" placeholder="Kod pocztowy" onblur="validPostCode(this)">
+                        <p id="alertKP"></p>
+
+                        <script type="text/javascript">
+                            function validPostCode(code) {
+                                if (!code.value.match(/^\d\d-\d\d\d$/) || code.value == "") {
+                                    code.value = "";
+                                    document.getElementById("alertKP").innerHTML = "Błędny kod";
+                                } else document.getElementById("alertKP").innerHTML = "";
+                            }
+                        </script>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row SeventhR">
+
+                <div class="col-md">
+                    Twój unikalny kod: #2131332
+                </div>
+
+
+            </div>
+
+            <div class="row EighthR">
+                <div class="col-md">
+                    <input type="checkbox" name="toggle"> Wyrazam zgode
+                </div>
+
+
+            </div>
+
+            <div class="row NinthR">
+
+                <div class="col-md">
+                    <button type="button" class="btn btn-success">Wspieram</button>
+
+                    <!-- Ewentualnie guzik do wysłania
+                        <button type="submit" class="btn btn-primary">Submit</button>-->
+                </div>
+
+
+            </div>
+        </form>
+    </div>
+
+    <!--Trzeci kontener ewentualnie stopka-->
+
+    <div class="container ThirdC">
+        <div class="row BottomF">
+
+            <div class="col-md">
+                poprzednie edycje
+            </div>
+
+
+        </div>
+
+        <div class="row BottomS">
+
+            <div class="col-md">
+                edycja
+            </div>
+            <div class="col-md">
+                edycja
+            </div>
+            <div class="col-md">
+                edycja
+            </div>
+            <div class="col-md">
+
+            </div>
+            <div class="col-md">
+                <a href="https://www.facebook.com"><img border="0" src="fb.png">
+                </a>
+                <a href="https://www.instagram.com"><img border="0" src="instagram.png">
+                </a>
+            </div>
+        </div>
+
+        <div class="row BottomT">
+
+            <div class="col-md">
+                nazwa firmy
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+</body>
+</html>
